@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+:root {
+    --primary: #ffd405;
+    --secondary: #fff;
+    --bg-main: #242323;
+}
+
+*, html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    overflow-x: hidden;
+    font-family: "Sofia Sans Semi Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    color: var(--primary);
+}
+
+.header {
+    background-color: var(--bg-main);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.bottom-border {
+    background: url("./static/img/border.png");
+    height: 85px;
+    width: 100vw;
+}
+.logo-image {
+    height: 150px;
+    padding-left: 20px;
+}
+
+.header-text {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.header-text-taxi {
+    color: var(--primary);
+}
+
+.header-text-city {
+    color: var(--secondary);
+}
+.header-phone-section {
+    display: flex;
+    flex-direction: column;
+}
+.header-phone {
+    font-size: 32px;
+    color: var(--secondary);
+}
+.header-phone:hover {
+    font-size: 32px;
+    color: var(--primary);
+}
+
+.header-phone:hover i{
+    font-size: 32px;
+    color: var(--secondary);
+}
+.header-phone i {
+    padding-right: 10px;
+    color: var(--primary);
+}
+
+.main-bg {
+    background: url("./static/img/bg-image-main.jpg") no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    width: 70%;
+    justify-content: space-evenly;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.box-icon {
+    width: 120px;
+    height: 120px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-icon i {
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.box-text {
+    font-size: 25px;
+    text-align: center;
+    color: var(--secondary)
+}
+
+footer {
+    background: var(--bg-main);
+    height: 200px;
+}
+
+.animation-left {
+    animation: slideFromLeft 1s ease-out forwards;
+}
+.animation-right {
+    animation: slideFromRight 1s ease-out forwards;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-phone {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-size: 40px;
+    color: var(--secondary);
+    gap: 40px;
+
+}
+.footer-phone i {
+    padding-right: 10px;
+}
+.phone-animation {
+    -webkit-animation: vibrate 0.32s cubic-bezier(.36, .07, .19, .97) infinite;
+    animation: vibrate 0.32s cubic-bezier(.36, .07, .19, .97) infinite;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+}
+
+/* Animations */
+@keyframes vibrate {
+    0.50%, 90% {
+      -webkit-transform: translate3d(-0.5px, 0, 0);
+              transform: translate3d(-0.5px, 0, 0);
+    }
+  
+    0.50%, 80% {
+      -webkit-transform: translate3d(0.5px, 0, 0);
+              transform: translate3d(0.5px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      -webkit-transform: translate3d(-0.5px, 0, 0);
+              transform: translate3d(-0.5px, 0, 0);
+    }
+  
+    0.50%, 60% {
+      -webkit-transform: translate3d(0.5px, 0, 0);
+              transform: translate3d(0.5px, 0, 0);
+    }
+  }
+  
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translate(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translate(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
